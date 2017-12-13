@@ -26,7 +26,29 @@
     <div id="greet">
         <button id="show-greet">Show greet!</button>
     </div>
+    <h2>Feedback</h2>
+    <form>
+        <label>Your name:
+            <input type="text" id="name">
+        </label>
+        <br>
+        <label>Your email:
+            <input type="email" id="email">
+        </label>
+        <br>
+        <label>Your Feedback
+            <textarea id="feedback"></textarea>
+        </label>
+        <br>
+        <input type="submit">
+    </form>
+    <dialog id="thank-dialog">
+        <h3>Thank You for contacting us</h3>
+    </dialog>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="js/get-client.js"></script>
+    <script src="js/feedback-from.js"></script>
 </body>
 
 </html>
