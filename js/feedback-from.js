@@ -14,5 +14,6 @@ function sendForm(ev) {
     },
     dataType: "json"
   })
-  .done(() => $("#thank-dialog").attr("open", "open"));
+    .done(() => $("#thank-dialog").attr("open", "open"))
+    .fail(() => $("#error-dialog").attr("open", "open"));
 }
