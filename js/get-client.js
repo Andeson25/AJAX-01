@@ -2,7 +2,14 @@ document.getElementById("loaded").innerHTML = new Date().toLocaleTimeString();
 
 document
   .getElementById("get-client-data")
-  .addEventListener("click", getClientData);
+  .addEventListener("click", fetchClientData);
+document.getElementById("show-greet").addEventListener("click", showGreetings);
+
+function showGreetings() {
+  fetch("greet.html")
+    .then(response => response.text())
+    .then(html => (document.getElementById("greet").innerHTML += html));
+}
 
 function getClientData() {
   const xhr = new XMLHttpRequest();
@@ -17,4 +24,15 @@ function getClientData() {
   };
   xhr.open("GET", "client-data.json", true);
   xhr.send();
+}
+
+function fetchClientData() {
+  fetch("client-data.json")
+    .then(response => response.json())
+    .then(clientData => {
+      document.getElementById("client-name").innerHTML =
+        clientData["client-name"];
+      document.getElementById("client-age").innerHTML =
+        clientData["client-age"];
+    });
 }
