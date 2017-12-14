@@ -29,25 +29,22 @@
     <button id="show-greet">Show greetings</button>
 
     <h2>Feedback</h2>
-    <form id="contact-form">
-        <label>Your name:
-            <input type="text" id="name" name="name" value="oleh" required>
-        </label>
-        <br>
-        <label>Your email:
-            <input type="email" id="email" name="email" value="oleh.petryk@gmail.com" required>
-        </label>
-        <br>
-        <label>Your feedback:
-            <textarea  name="text" id="text" >sadasd</textarea>
-        </label>
-        <br>
-        <input type="submit">
-    </form>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="js/get-client.js"></script>
-    <script src="js/feedback-form.js"></script>
+    <form method="post" action="" id="ajaxform">
+        <br />
+        <input type="text" size="32" maxlength="36" name="name" placeholder="Вaшe имя" val="">
+        <br />
+        <input type="text" size="32" maxlength="36" name="email" placeholder="Вaш email" val="">
+        <br />
+        <input type="text" size="32" maxlength="36" name="subject" placeholder="Тeмa" val="">
+        <br />
+        <textarea cols="25" rows="10" name="message" placeholder="Сooбщeниe.." val=""></textarea>
+        <br />
+        <input type="submit" value="GO GO GO" />
+        </form>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script src="js/get-client.js"></script>
+        <script src="js/feedback-form.js"></script>
 </body>
 
 </html>
