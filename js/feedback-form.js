@@ -4,7 +4,7 @@ $(document).ready(function() {
     var error = false; 
     form.find("input, textarea").each(function() {
       if ($(this).val() == "") {
-        alert('Зaпoлнитe пoлe "' + $(this).attr("placeholder") + '"!'); 
+        alert('Заповніть пoлe "' + $(this).attr("placeholder") + '"!'); 
         error = true; 
       }
     });
@@ -15,17 +15,13 @@ $(document).ready(function() {
         url: "https://formspree.io/oleh.petryk@gmail.com", 
         dataType: "json", 
         data: data,
-      
-        success: function(data) {
-          if (data["error"]) {
-            alert(data["error"]); 
-          } else {
-            alert("Форма відправлена успішно!"); // пишeм чтo всe oк
-          }
+        success: ()=> {
+            alert("Форма відправлена успішно!"); 
         },
         error: function(xhr, ajaxOptions, thrownError) {
           alert(xhr.status); 
           alert(thrownError); 
+          alert("Помилка!")
         },
       });
     }
