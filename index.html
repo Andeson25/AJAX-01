@@ -29,31 +29,21 @@
     <button id="show-greet">Show greetings</button>
 
     <h2>Feedback</h2>
-    <form id="contact-form">
+    <form id="form">
         <label>Your name:
-            <input type="text" id="name" required>
+            <input type="text"  name="name" required>
         </label>
         <br>
         <label>Your email:
-            <input type="email" id="email" required>
+            <input type="email"name="email" required>
         </label>
         <br>
         <label>Your feedback:
-            <textarea id="feedback"></textarea>
+            <textarea  name="text" ></textarea>
         </label>
         <br>
-        <input  type="submit">
+        <button>Send</button>
     </form>
-
-    <dialog id="thank-dialog">
-        <p>Thank you for contacting us!</p>
-    </dialog>
-
-    <dialog id="error-dialog">
-        <p>Sorry, an error has occured!</p>
-    </dialog>
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="js/get-client.js"></script>
