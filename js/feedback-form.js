@@ -1,14 +1,19 @@
- $(document).ready(function() {
-	$("#form").submit(function() {
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$(this).find("input").val("");
-			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-			$("#form").trigger("reset");
-		});
-		return false;
-	});	
+$(function() {
+  $("#contact-form input[type=submit]").click(sendForm);
 });
+
+function sendForm(ev) {
+  const form = document.getElementsByTagName("form")[0];
+  if (form.checkValidity()) {
+    ev.preventDefault();
+    $.ajax({
+      
+      url: "mail.php",
+      method:"POST",
+      data: $(form).serialize()
+    })
+      .done(() => alert("Усішно відправлено!"))
+      .fail(() => alert("Сталася помилка!") );
+  }
+}
+

@@ -9,4 +9,4 @@ $text = trim($_POST["text"]);
 $message = "Імя: $name \Телефон: $email \nТекст: $text";
 
 $pagetitle = "Нова заявка з сайту \"$sitename\"";
-mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
+mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");?>
