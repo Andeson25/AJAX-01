@@ -1,8 +1,6 @@
 document.getElementById("loaded").innerHTML = new Date().toLocaleTimeString();
 
-document
-  .getElementById("get-client-data")
-  .addEventListener("click", fetchClientData);
+document.getElementById("get-client-data").addEventListener("click", fetchClientData);
 document.getElementById("show-greet").addEventListener("click", showGreetings);
 
 function showGreetings() {
